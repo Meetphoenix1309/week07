@@ -122,6 +122,12 @@ jobs:
 
       - name: Run tests
         working-directory: frontend
+        env:
+          VITE_USER_SERVICE_URL: /api/users
+          VITE_STUDENT_SERVICE_URL: /api/students
+          VITE_LECTURER_SERVICE_URL: /api/lecturers
+          VITE_COURSE_SERVICE_URL: /api/courses
+          VITE_ENROLLMENT_SERVICE_URL: /api/enrollments
         run: npm run test:run
 
 
